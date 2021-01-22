@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no user-scalable=no" />
+    
+    <title>Login</title>
+
+    <link rel="icon" type="image/x-icon" href="image\favicon.ico" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+   
+  </head>
+  <body>
+    <header>
+      <div id="topNavVariant">
+        <div class="navMaxWidth">
+          <div id="topNavRightVariant" class="clear-margin-top">
+            <span class="menu-item desktop-inline-block">
+              <a class="nounderline" href="#">Discover</a>
+            </span>
+           
+            <span class="menu-item desktop-inline-block">
+              <a href="#" class="nounderline">Search</a>
+            </span>
+            <span class="menu-item mobile-inline-block">
+              <a href="#"><i class="material-icons">search</i></a>
+            </span>
+            <span class="desktop-inline-block clear-margin-top">
+              <a href="mailto:test@gmail.com" class="nounderline">Support</a>
+            </span>
+          </div>
+
+          <div id="topNavLeftVariant" class="clear-margin-top">
+            <a href="#">
+              <img src="image\instareadlog.svg" alt="Instaread Logo" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="hosted_content" class="clear-margin-top">
+      <div class="hosted_content_row">
+        <div class="hosted_content">
+          <div class="smallishcolumn" style="float: left">
+            <div class="loadableContainer" id="loginForm">
+              <h1>Member Log In</h1>
+              <br />
+
+              <form id="accountLoginForm">
+                <label for="loginEmail">Email</label>
+                <input type="text" id="loginEmail" placeholder="Email" autocorrect="off" autocapitalize="none" required />
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" placeholder="Password" autocorrect="off" autocapitalize="none" required />
+
+                <div id="loginError" class="errorDisplay"></div>
+                <input type="submit" value="Log In" class="button" />
+                <script>
+                  var loginForm = document.getElementById("accountLoginForm");
+                  loginForm.addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    if (loginForm.checkValidity()) {
+                      login();
+                    }
+                  });
+                </script>
+              </form>
+              <div id="loginFacebook" style="display: none">
+                <p class="withLinesVariant"><span>OR</span></p>
+                <div id="loginFacebookError" class="displayError"></div>
+                <div id="loginFacebookButton" onclick="javascript:loginWithFacebook();">
+                  <p><i class="fa fa-facebook-square"></i>&nbsp;&nbsp;&nbsp;Login With Facebook</p>
+                </div>
+              </div>
+              <div class="after_form">
+                <p class="login_links">
+                  <a href="account_reset.html" class="nounderline">Reset Password</a>
+                </p>
+              </div>
+              <div class="after_form">
+                <p class="login_links">Not a member? <a href="signup.html">Join For Free</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="clear-margin-top">
+            <div id="hero_right_variant" style="float: right">
+              <div class="hero_right_foreground_variant">
+                <img class="book_cover_image" src="image\landingiphone.PNG" alt="" />
+                <div class="book_cover_overlay">
+                  <a href="image\landingiphone.PNG"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-wrapper">
+      <footer>
+        <script type="application/ld+json">
+          {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Instaread",
+            "url": "https://instaread.co",
+            "legalName": "Instaread, Inc.",
+            "sameAs": ["https://twitter.com/instareads", "https://facebook.com/instaread", "https://instagram.com/instareadapp"]
+          }
+        </script>
+        <div class="footer-left">
+          <div>
+            <h2>Get Smarter in Minutes.</h2>
+            <p>Through audio & text formats.</p>
+          </div>
+          <div class="copyright-desktop">
+            <div class="footer-terms">
+              <a class="nounderline" href="#" target="_blank">Terms of Service</a>&nbsp&nbsp|&nbsp&nbsp<a
+                class="nounderline"
+                href="#"
+                target="_blank"
+                >Privacy Policy</a
+              >
+            </div>
+            <span id="contact_copyright">© Instaread 2020. All rights reserved</span>
+          </div>
+        </div>
+        <div class="footer-center">
+          <h4>Categories</h4>
+          <div class="footer-list">
+            <a class="nounderline" href="#">New</a>
+            <a class="nounderline" href="#">Popular</a>
+            <a class="nounderline" href="#">Business & Economics</a>
+            <a class="nounderline" href="#">Self-Help</a>
+            <a class="nounderline" href="#">Politics</a>
+            <a class="nounderline" href="#">The New York Times</a>
+            <a class="nounderline" href="#">Harvard Business Review</a>
+            <a class="nounderline" href="#">Instaread Originals</a>
+            <a class="nounderline" href="#">Health & Fitness</a>
+            <a class="nounderline" href="#>Fiction </a>
+            <a class="nounderline" href="#">Daily Insights</a>
+            <a class="nounderline" href="#">Science</a>
+            <a class="nounderline" href="#">Religion</a>
+            <a class="nounderline" href="#">Sports & Recreation</a>
+            <a class="nounderline" href="#">Biographies</a>
+          </div>
+        </div>
+        <div class="footer-center">
+          <h4>Company</h4>
+          <div class="footer-list">
+            <a class="nounderline" href="#">Help & Contact</a>
+            <a class="nounderline" href="#">Teams</a>
+            <a class="nounderline" href="#">Articles</a>
+            <a class="nounderline" href="#">The Nugget</a>
+            <a class="nounderline" href="#">Subscription FAQs</a>
+          </div>
+        </div>
+        <div class="footer-center-mobile clear-margin-top">
+          <div class="footer-hr"></div>
+          <div id="categories-expandable" class="footer-expand clear-margin-top">
+            <h4>Categories</h4>
+            <i id="category-icon" class="expand-icon material-icons clear-margin-top">add</i>
+          </div>
+          <div id="categories-list" style="display: none">
+            <div class="footer-list">
+              <a class="nounderline" href="#">New</a>
+              <a class="nounderline" href="#">Popular</a>
+              <a class="nounderline" href="#">Business & Economics</a>
+              <a class="nounderline" href="#">Self-Help</a>
+              <a class="nounderline" href="#">Politics</a>
+              <a class="nounderline" href="#">The New York Times</a>
+              <a class="nounderline" href="#">Harvard Business Review</a>
+              <a class="nounderline" href="#">Instaread Originals</a>
+              <a class="nounderline" href="#">Health & Fitness</a>
+              <a class="nounderline" href="#">Fiction</a>
+              <a class="nounderline" href="#">Daily Insights</a>
+              <a class="nounderline" href="#">Science</a>
+              <a class="nounderline" href="#">Religion</a>
+              <a class="nounderline" href="#">Sports & Recreation</a>
+              <a class="nounderline" href="#">Biographies</a>
+            </div>
+          </div>
+          <div class="footer-hr"></div>
+        </div>
+        <div class="footer-center-mobile clear-margin-top">
+          <div id="company-expandable" class="footer-expand">
+            <h4>Company</h4>
+            <i id="company-icon" class="expand-icon material-icons clear-margin-top">add</i>
+          </div>
+          <div id="company-list" style="display: none">
+            <div class="footer-list">
+              <a class="nounderline" href="#">Help & Contact</a>
+              <a class="nounderline" href="#">Teams</a>
+              <a class="nounderline" href="#">Articles</a>
+              <a class="nounderline" href="#">The Nugget</a>
+              <a class="nounderline" href="#">Subscription FAQs</a>
+            </div>
+          </div>
+          <div class="footer-hr"></div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-icons">
+            <div class="footer-circular-icon clear-margin-top">
+              <button class="footer-button" onclick="trackSMClick('twitter')">
+                <div class="footer-circle">
+                  <div id="track-twitter" class="footer-circle-button"></div>
+                  <i class="footer-icon clear-margin-top fa fa-twitter" ></i>
+                </div>
+              </button>
+            </div>
+            <div class="footer-circular-icon clear-margin-top">
+              <button class="footer-button" onclick="trackSMClick('facebook')">
+                <div class="footer-circle">
+                  <div id="track-facebook" class="footer-circle-button"></div>
+                  <i class="footer-icon clear-margin-top fa fa-facebook-square"></i>
+                </div>
+              </button>
+            </div>
+            <div class="footer-circular-icon clear-margin-top">
+              <button class="footer-button" onclick="trackSMClick('instagram')">
+                <div class="footer-circle">
+                  <div id="track-instagram" class="footer-circle-button"></div>
+                  <i class="footer-icon clear-margin-top fa fa-instagram"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div id="apple-store-link" class="app-links">
+            <a
+              id="track-apple-store"
+              class="apple-badge"
+              onclick="return trackBadgeClick('apple_store')"
+              href="https://itunes.apple.com/us/app/instaread-audio-text/id1046172976?mt=8"
+              style="
+                background: url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2015-11-27&amp;kind=iossoftware&amp;bubble=ios_apps)
+                  no-repeat;
+              "
+            ></a>
+          </div>
+          <div id="google-play-store-link" class="app-links">
+            <a
+              id="track-google-store"
+              class="google-playstore-badge"
+              onclick="return trackBadgeClick('google_store')"
+              href="https://play.google.com/store/apps/details?id=co.instaread.android&amp;utm_source=website"
+              ><img class="badge-img" alt="Get it on Google Play" src="image\google-play-badge.png"
+            /></a>
+          </div>
+        </div>
+        <div class="copyright-mobile">
+          <div class="footer-terms">
+            <a class="nounderline" href="#" target="_blank">Terms of Service</a>&nbsp&nbsp|&nbsp&nbsp<a
+              class="nounderline"
+              href="#"
+              target="_blank"
+              >Privacy Policy</a
+            >
+          </div>
+          <span id="contact_copyright">© Instaread 2020. All rights reserved</span>
+        </div>
+        <script>
+          $("#categories-expandable").click(function () {
+            var expandDiv = $("#categories-list");
+            expandDiv.slideToggle(500, function () {
+              if ($(this).is(":visible")) {
+                $("#category-icon").html("remove");
+              } else {
+                $("#category-icon").html("add");
+              }
+            });
+          });
+          $("#company-expandable").click(function () {
+            var expandDiv = $("#company-list");
+            expandDiv.slideToggle(500, function () {
+              if ($(this).is(":visible")) {
+                $("#company-icon").html("remove");
+              } else {
+                $("#company-icon").html("add");
+              }
+            });
+          });
+          function trackSMClick(source) {
+            switch (source) {
+              case "twitter":
+                mixpanel.track("Click Footer SM", { sm_source: source });
+                window.location.href = "https://twitter.com/instareads";
+                break;
+              case "facebook":
+                mixpanel.track("Click Footer SM", { sm_source: source });
+                window.location.href = "https://facebook.com/instaread";
+                break;
+              case "instagram":
+                mixpanel.track("Click Footer SM", { sm_source: source });
+                window.location.href = "https://instagram.com/instareadapp";
+                break;
+              default:
+                break;
+            }
+          }
+          function trackBadgeClick(source) {
+            switch (source) {
+              case "apple_store":
+                mixpanel.track("Click Footer App Badge", { sm_source: source });
+                break;
+              case "google_store":
+                mixpanel.track("Click Footer App Badge", { sm_source: source });
+                break;
+              default:
+                break;
+            }
+          }
+        </script>
+      </footer>
+    </div>
+    
+   <script src="script.js"></script>
+  </body>
+</html>
